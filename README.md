@@ -7,7 +7,7 @@ Used Tool
     -. Get Movie Detail : https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
     -. Get Movie Reviews : https://api.themoviedb.org/3/movie/{movie_id}/reviews?api_key=<<api_key>>&language=en-US&page=1
     -. Get Trending : https://api.themoviedb.org/3/movie/latest?api_key=<<api_key>>&language=en-US
-
+4. design : antd
 ```
 
 
