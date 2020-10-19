@@ -11,6 +11,7 @@ function MovieDetail(props) {
 
     const [Movie, setMovie] = useState([]);
     const [Casts, setCasts] = useState([]);
+    const [ActorToggle, setActorToggle] = useState(false)
 
     useEffect(() => {
 
@@ -35,7 +36,11 @@ function MovieDetail(props) {
             
         })
 
-    }, [])
+    }, []);
+
+    const toggleActorView = () => {
+        setActorToggle(!ActorToggle);
+    }
 
     return (
         <div>
@@ -59,10 +64,11 @@ function MovieDetail(props) {
                 {/* Actors Grid */}
 
                 <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem' }}>
-                    <button> Toggle Actor View </button>
+                    <button onClick={toggleActorView}> Toggle Actor View </button>
                 </div>
 
-                <Row gutter={[16, 16]}>
+                {ActorToggle &&
+                    <Row gutter={[16, 16]}>
                     {Casts && Casts.map((cast, index) => (
                         <React.Fragment key={index}>
                             <GridCards 
@@ -72,8 +78,10 @@ function MovieDetail(props) {
                                 characterName={cast.name}
                             />
                         </React.Fragment>
-                    ))}
-                </Row>
+                        ))}
+                    </Row>
+                }
+                
 
             </div>
             
