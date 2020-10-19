@@ -30,8 +30,17 @@ function MovieDetail(props) {
             {/* Header */}
 
             {/* Body */}
-            <div>
-                
+            <div style={{ width: '85%', margin: '1rem auto' }}>
+
+                {/* Movie Info */}
+
+
+                <br />
+                {/* Actors Grid */}
+
+                <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem' }}>
+                    <button> Toggle Actor View </button>
+                </div>
             </div>
             
         </div>
