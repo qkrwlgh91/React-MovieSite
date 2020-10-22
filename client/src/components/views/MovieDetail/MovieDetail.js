@@ -57,7 +57,8 @@ function MovieDetail(props) {
             <div style={{ width: '85%', margin: '1rem auto' }}>
 
                 <div style={{ display: 'flex', justifyContent: 'flex-end'}}>
-                    <Favorite movieInfo={Movie} movieId={movieId} userFrom={}/>
+                    {/* userForm은 F12에서 Application의 localstorage의 key값인 userId를 통해서 value를 가져온다 */}
+                    <Favorite movieInfo={Movie} movieId={movieId} userFrom={localStorage.getItem('userId')} />
                 </div>
 
                 {/* Movie Info */}

@@ -2,7 +2,13 @@ import Axios from 'axios'
 import React, {useEffect} from 'react'
 
 
-function Favorite() {
+function Favorite(props) {
+
+    const movieId = props.movieId
+    const userFrom = props.userFrom
+    const movieTitle = props.movieInfo.title
+    const moviePost = props.movieInfor.backdrop_path
+    const movieRunTime = props.movieInfo.runtime
 
 useEffect(() => {
     
