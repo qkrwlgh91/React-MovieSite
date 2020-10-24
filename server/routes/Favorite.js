@@ -55,4 +55,14 @@ router.post('/addToFavorite', (req, res) => {
 
 })
 
+router.post('/getFavoritedMovie', (req, res) => {
+
+    Favorite.find({ 'userFrom': req.body.userFrom }) 
+        .exec((err, favorites) => {
+            if(err) return res.status(400).send(err)
+            return res.status(200).json({ success: true, favorites })
+        })
+
+})
+
 module.exports = router;

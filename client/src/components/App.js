@@ -6,6 +6,7 @@ import LandingPage from "./views/LandingPage/LandingPage.js";
 import LoginPage from "./views/LoginPage/LoginPage.js";
 import RegisterPage from "./views/RegisterPage/RegisterPage.js";
 import MovieDetail from './views/MovieDetail/MovieDetail';
+import FavoritePage from './views/FavoritePage/FavoritePage';
 import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer"
 
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
           <Route exact path="/movie/:movieId" component={Auth(MovieDetail, null)} />
+          <Route exact path="/favorite" component={Auth(FavoritePage, true)} />
 
         </Switch>
       </div>
